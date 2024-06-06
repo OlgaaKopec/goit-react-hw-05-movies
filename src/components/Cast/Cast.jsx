@@ -5,7 +5,7 @@ import axios from 'axios';
 const Cast = () => {
   const { movieId } = useParams();
   const [cast, setCast] = useState([]);
-  const defaultImg = 'https://ireland.apollo.olxcdn.com/v1/files/0iq0gb9ppip8-UA/image;s=1000x700';
+  const defaultImg = 'https://pl.wikipedia.org/wiki/Wiewi%C3%B3rka_pospolita#/media/Plik:Squirrel_by_mareckr.jpg';
 
   useEffect(() => {
     if (!movieId) return;

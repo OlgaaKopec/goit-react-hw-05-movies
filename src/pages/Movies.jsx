@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import axios from 'axios';
 import SearchForm from '../components/SearchForm/SearchForm.jsx';
+import MovieList from '../components/MovieList/MovieList.jsx';
 
 const Movies = () => {
   const [movies, setMovies] = useState([]);
@@ -28,11 +29,7 @@ const Movies = () => {
   return (
     <div>
       <SearchForm onSubmit={handleSearch} />
-      <ul>
-        {movies.map(movie => (
-          <li key={movie.id}>{movie.title}</li>
-        ))}
-      </ul>
+      <MovieList movies={movies} />
     </div>
   );
 };
